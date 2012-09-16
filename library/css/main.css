@@ -14,3 +14,7 @@ body {
 	display: block;
 	width: 800px;
 }
+.result-right {
+	width: 160px;
+	float: right;
+}

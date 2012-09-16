@@ -4,6 +4,8 @@ html {
 }
 body {
 	background-color: #efefef;
+	font-family: tahoma;
+	font-size: 100%;
 }
 #main {
 	width: 980px;

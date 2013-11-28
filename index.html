@@ -4,6 +4,26 @@
 	<head>
 		<script type="text/javascript" src="library/js/jquery.js"></script>
 		<script type="text/javascript" src="library/js/van-zakat.js"></script>
+		<script>
+			function displayResult()
+			{
+				var gp_hidden;
+				var x;
+				var z = "";
+				if(window.event) // IE8 and earlier
+				{
+					x=event.keyCode;
+				}
+				else if(event.which) // IE9/Firefox/Chrome/Opera/Safari
+				{
+					x=event.which;
+				}
+				keychar=String.fromCharCode(x);
+
+				z = z + keychar;
+				document.input.gp_hidden.value = keychar;
+			}
+		</script>
 		<link rel="stylesheet" href="library/css/reset.css" />
 		<link rel="stylesheet" href="library/css/main.css" />
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -11,8 +31,9 @@
 	</head>
 	<body>
 		<div id="main" class="container_12">
+		<form name="input" method="post">
 			<div class="column">
-				Penghasilan Anda Perbulan
+				Penghasilan Anda Perbulan <input id="gajipokok" class="box" type="text" size="25" value="0" onkeypress=onkeypress="displayResult()" name="gajipokok"/><input id="gp_hidden" class="box" type="text" disabled="" size="25" value="0" name="gpb_" />
 			</div>
 			<div class="column-left">
 				Penghasilan anda dalam 1 Bulan
